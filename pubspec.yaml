@@ -1,0 +1,31 @@
+name: flutter_dev_test
+description: "Developer's Flutter test"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  otp: ^3.1.4
+  dio: ^5.7.0
+  bloc:
+  flutter_bloc:
+  flutter_modular: ^6.3.4
+  fluttertoast:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
