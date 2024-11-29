@@ -36,6 +36,10 @@ class _RecorySecretPageState extends State<RecorySecretPage> {
         context: context);
   }
 
+  void clearCode() {
+    widget.inputSecretController.code = '';
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.sizeOf(context);
@@ -166,6 +170,7 @@ class _RecorySecretPageState extends State<RecorySecretPage> {
                                 .text.isEmpty
                             ? null
                             : () async {
+                                clearCode();
                                 widget.inputSecretController
                                     .innerJoinTextEditingSecretCode();
                                 submitSecretRecory();
