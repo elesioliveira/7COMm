@@ -2,7 +2,7 @@
 
 import 'package:flutter_dev_test/core/shared/result.dart';
 import '../../../../core/models/auth_response.model.dart';
-import '../../datasources/signin_repository_datasource.dart';
+import '../../datasources/signin_datasource.dart';
 import '../repositories/signin_repository.dart';
 
 class SigninRepositoryImpl implements SigninRepository {

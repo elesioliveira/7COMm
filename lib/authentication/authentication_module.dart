@@ -6,7 +6,7 @@ import 'package:flutter_dev_test/core/core_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import '../home/presentation/view/home_page.dart';
 import 'data/datasources/recory_secret_datasource.dart';
-import 'data/datasources/signin_repository_datasource.dart';
+import 'data/datasources/signin_datasource.dart';
 import 'data/remote/repositories/recory_secret_repository.dart';
 import 'data/remote/repositories/signin_repository.dart';
 import 'data/remote/repositories_impl/recory_secret_repository_impl.dart';
