@@ -6,10 +6,10 @@ import 'package:flutter_dev_test/authentication/presentation/blocs/recory_secret
 import 'package:flutter_dev_test/core/utils/app_navigation.dart';
 import 'package:flutter_dev_test/core/utils/show_toast.dart';
 import 'package:otp/otp.dart';
-import '../../../data/remote/datasources/recory_secret_datasource.dart';
+import '../../../data/remote/repositories/recory_secret_repository.dart';
 
 class RecorySecretBloc extends Cubit<RecorySecretState> {
-  final RecorySecretDatasource recoryDataSource;
+  final RecorySecretRepository recoryDataSource;
   String secretCode = '';
 
   RecorySecretBloc({required this.recoryDataSource})

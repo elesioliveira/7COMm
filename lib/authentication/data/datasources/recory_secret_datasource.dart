@@ -1,17 +1,15 @@
-import 'package:flutter_dev_test/authentication/data/remote/datasources/recory_secret_datasource.dart';
-import 'package:flutter_dev_test/core/shared/http_manager.dart';
-import 'package:flutter_dev_test/core/shared/result.dart';
-import '../../../../core/constants/app_urls.dart';
-import '../../../../core/models/secret_code_model.dart';
-import '../../../../core/shared/http_exception_model.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import '../../../core/constants/app_urls.dart';
+import '../../../core/models/secret_code_model.dart';
+import '../../../core/shared/http_exception_model.dart';
+import '../../../core/shared/http_manager.dart';
+import '../../../core/shared/result.dart';
 
-class RecorySecretDatasourceImpl implements RecorySecretDatasource {
+class RecorySecretDatasource {
   final HttpManager httpManager;
+  RecorySecretDatasource({required this.httpManager});
 
-  const RecorySecretDatasourceImpl({required this.httpManager});
-
-  @override
-  Future<Result<SecretCodeModel>> recorySecretToken(
+  Future<Result<SecretCodeModel>> getSecretToken(
       {required String user,
       required String password,
       required String code}) async {

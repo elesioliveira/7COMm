@@ -1,19 +1,15 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import '../../../core/constants/app_urls.dart';
+import '../../../core/models/auth_response.model.dart';
+import '../../../core/shared/http_exception_model.dart';
+import '../../../core/shared/http_manager.dart';
+import '../../../core/shared/result.dart';
 
-import 'package:flutter_dev_test/core/shared/result.dart';
-import 'package:flutter_dev_test/core/shared/http_manager.dart';
-import '../../../../core/constants/app_urls.dart';
-import '../../../../core/models/auth_response.model.dart';
-import '../../../../core/shared/http_exception_model.dart';
-import '../datasources/signin_datasource.dart';
-
-class SigninDatasouceImpl implements SigninDatasource {
+class SigninRepositoryDatasource {
   final HttpManager httpManager;
+  SigninRepositoryDatasource({required this.httpManager});
 
-  const SigninDatasouceImpl({required this.httpManager});
-
-  @override
-  Future<Result<AuthResponseModel>> signinUser({
+  Future<Result<AuthResponseModel>> getUser({
     required String user,
     required String password,
     required String otp,
