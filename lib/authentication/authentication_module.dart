@@ -4,7 +4,6 @@ import 'package:flutter_dev_test/authentication/presentation/views/login_page.da
 import 'package:flutter_dev_test/authentication/presentation/views/recory_secret_page.dart';
 import 'package:flutter_dev_test/core/core_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import '../home/presentation/view/home_page.dart';
 import 'data/datasources/recory_secret_datasource.dart';
 import 'data/datasources/signin_datasource.dart';
 import 'data/remote/repositories/recory_secret_repository.dart';
@@ -40,6 +39,5 @@ class AuthenticationModule extends Module {
             signinBloc: Modular.get<SigninBloc>(),
             bloc: Modular.get<RecorySecretBloc>(),
             inputSecretController: Modular.get<InputSecretController>()));
-    r.child('/home', child: (_) => const HomePage());
   }
 }
